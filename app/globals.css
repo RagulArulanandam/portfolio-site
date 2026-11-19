@@ -38,6 +38,23 @@ html {
   scroll-behavior: smooth;
 }
 
+.font-display {
+  font-family: var(--font-sora), var(--font-inter), system-ui, sans-serif;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, var(--accent), #8b5cf6 60%, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-glow {
+  background:
+    radial-gradient(40rem 20rem at 85% 0%, color-mix(in srgb, #8b5cf6 22%, transparent), transparent 70%),
+    radial-gradient(36rem 18rem at 5% 10%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%);
+}
+
 body {
   background: var(--bg);
   color: var(--text);

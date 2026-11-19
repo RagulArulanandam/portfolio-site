@@ -21,17 +21,14 @@ export const profile = {
   email: "ragularulanandam@gmail.com",
   github: "https://github.com/RagulArulanandam",
   linkedin: "https://www.linkedin.com/in/ragul-a-295b02148",
-  headline: "I build full-stack applications and practical LLM systems.",
+  headline: "I turn code and data into intelligent software.",
+  roles: ["Software Engineer", "Full-stack Developer", "Python Developer", "Data Scientist", "Data Engineer", "Data Analyst"],
+  seeking:
+    "Hunting for roles where clean code meets curious data: building products, shaping pipelines and teaching models to be useful.",
   intro:
     "Software engineer with 3+ years of commercial experience in C#, ASP.NET Core, Angular and React, and an MSc in Data Science and AI (Merit) from the University of Liverpool. I enjoy turning ideas into working systems, from data pipelines and models to APIs and polished interfaces.",
   visa: "Graduate Visa to Dec 2028. Open to Skilled Worker sponsorship.",
 };
-
-export const cvs = [
-  { label: "Full-stack", file: "/cv/Ragul_Arulanandam_FullStack_CV.pdf" },
-  { label: "Data Analyst", file: "/cv/Ragul_Arulanandam_DataAnalyst_CV.pdf" },
-  { label: "Data Engineer", file: "/cv/Ragul_Arulanandam_DataEngineer_CV.pdf" },
-];
 
 export const skills: { group: string; items: string[] }[] = [
   { group: "Backend", items: ["C#", "ASP.NET Core", ".NET 6/8/10", "Entity Framework Core", "Clean Architecture", "Microservices", "Java"] },
@@ -63,7 +60,7 @@ export const education = [
 
 export const certs = ["Microsoft Azure Fundamentals (AZ-900)", "HCL Technologies Champion Award, 2022 to 2024"];
 
-export const projects: Project[] = [
+const list: Project[] = [
   {
     slug: "hirelens",
     title: "HireLens",
@@ -71,7 +68,6 @@ export const projects: Project[] = [
     categories: ["AI and LLM", "Full-stack"],
     stack: ["Angular", "ASP.NET Core", "EF Core", "SQL Server", "LLM API", "xUnit"],
     repo: "https://github.com/RagulArulanandam/hirelens",
-    featured: true,
     images: [
       { src: "/projects/hirelens/results.png", alt: "HireLens results page with score rings and gaps" },
       { src: "/projects/hirelens/history.png", alt: "HireLens analysis history" },
@@ -100,7 +96,6 @@ export const projects: Project[] = [
     categories: ["AI and LLM", "Data"],
     stack: ["Python", "TensorFlow", "MobileNetV2", "Gemini API", "Gradio"],
     repo: "https://github.com/RagulArulanandam/MSC_DISSERTATION_2025",
-    featured: true,
     images: [],
     objective:
       "Combine computer vision with a conversational LLM so that a diagnosis comes with context-aware follow-up, while keeping the model on topic.",
@@ -123,7 +118,6 @@ export const projects: Project[] = [
     categories: ["AI and LLM", "Full-stack"],
     stack: ["Next.js", "TypeScript", "Supabase", "PostgreSQL RLS", "LLM API", "n8n"],
     repo: "https://github.com/RagulArulanandam/AI_Product_POC",
-    featured: true,
     images: [],
     objective:
       "A hands-on exploration of what an AI engineer builds around a model: tenancy, queues, safe conversation rules and observability.",
@@ -146,7 +140,6 @@ export const projects: Project[] = [
     categories: ["Data"],
     stack: ["Python", "Polars", "PostgreSQL", "Power BI", "Airflow", "Docker", "pytest"],
     repo: "https://github.com/RagulArulanandam/nyc-taxi-etl",
-    featured: true,
     images: [],
     objective: "Build a reliable end-to-end pipeline and measure the performance choices rather than assume them.",
     approach: [
@@ -201,22 +194,9 @@ export const projects: Project[] = [
     ],
     results: ["Application unit tests and WebApplicationFactory integration tests.", "Responsive, keyboard accessible and AA contrast."],
   },
-  {
-    slug: "talentsync",
-    title: "TalentSync",
-    tagline: "Recruitment platform with automated resume ingestion, scoring and ranking.",
-    categories: ["Full-stack"],
-    stack: ["Angular", "ASP.NET Core", "C#", "SQL Server"],
-    repo: "",
-    images: [],
-    objective: "Design a full-stack recruitment platform on Clean Architecture.",
-    approach: [
-      "ASP.NET Core Web API with EF Core migrations and an Angular dashboard.",
-      "JWT and ASP.NET Identity authentication with role-based access control.",
-      "Automated PDF and DOCX resume ingestion with scoring and ranking.",
-    ],
-    results: ["End-to-end flow from upload to ranked candidate list."],
-  },
 ];
+
+const order = ["platera", "hirelens", "cassava-guard", "ai-product-poc", "nyc-taxi-etl", "uk-retail-warehouse"];
+export const projects: Project[] = order.map((s) => list.find((p) => p.slug === s)!);
 
 export const categories: ("All" | Category)[] = ["All", "AI and LLM", "Full-stack", "Data"];

@@ -1,28 +1,38 @@
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
-import { certs, cvs, education, experience, profile, projects, skills } from "@/lib/data";
+import { certs, education, experience, profile, projects, skills } from "@/lib/data";
 
 const btnPrimary = "rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90";
 const btnGhost = "rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-accent";
 
 export default function Home() {
-  const featured = projects.filter((p) => p.featured);
+  const featured = projects.slice(0, 3);
   return (
     <>
-      <section className="mx-auto max-w-6xl px-5 pb-16 pt-16 sm:pt-24">
+      <section className="hero-glow">
+      <div className="mx-auto max-w-6xl px-5 pb-16 pt-16 sm:pt-24">
         <span className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-fg">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Open to work · {profile.location}
         </span>
-        <h1 className="mt-6 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-6xl">
-          {profile.headline}
+        <h1 className="font-display mt-6 max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-6xl">
+          I turn <span className="text-gradient">code and data</span> into intelligent software.
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
+        <p className="mt-4 max-w-2xl text-base font-medium">{profile.seeking}</p>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {profile.roles.map((r) => (
+            <span key={r} className="rounded-full border border-line bg-bg px-3 py-1 text-xs font-medium text-muted">
+              {r}
+            </span>
+          ))}
+        </div>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/projects" className={btnPrimary}>View projects</Link>
           <a href={profile.github} className={btnGhost}>GitHub</a>
           <a href={profile.linkedin} className={btnGhost}>LinkedIn</a>
         </div>
         <p className="mt-6 text-sm text-muted">{profile.visa}</p>
+      </div>
       </section>
 
       <section className="border-y border-line bg-surface">
@@ -30,7 +40,7 @@ export default function Home() {
           {[
             ["3+ years", "Commercial software engineering"],
             ["MSc Merit", "Data Science and AI, Liverpool"],
-            ["7 projects", "LLM, full-stack and data"],
+            ["6 projects", "LLM, full-stack and data"],
           ].map(([a, b]) => (
             <div key={a}>
               <p className="text-2xl font-semibold tracking-tight">{a}</p>
@@ -106,15 +116,15 @@ export default function Home() {
 
       <section id="contact" className="scroll-mt-16 border-t border-line bg-surface">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <h2 className="text-3xl font-semibold tracking-tight">Let&apos;s talk</h2>
+          <h2 className="font-display text-3xl font-extrabold tracking-tight">
+            Got a problem worth <span className="text-gradient">solving?</span>
+          </h2>
           <p className="mt-3 max-w-xl text-muted">
-            I&apos;m looking for software engineering, data and AI roles in the UK. Download the CV that fits the role.
+            I&apos;m open to software engineering, Python and data roles across the UK. If you&apos;re building something
+            interesting, I&apos;d love to hear about it.
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <a href={`mailto:${profile.email}`} className={btnPrimary}>Email me</a>
-            {cvs.map((c) => (
-              <a key={c.file} href={c.file} download className={btnGhost}>CV: {c.label}</a>
-            ))}
+          <div className="mt-6">
+            <a href={`mailto:${profile.email}`} className={btnPrimary}>{profile.email}</a>
           </div>
         </div>
       </section>
