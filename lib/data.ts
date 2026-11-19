@@ -20,7 +20,7 @@ export const profile = {
   location: "Liverpool, United Kingdom",
   email: "ragularulanandam@gmail.com",
   github: "https://github.com/RagulArulanandam",
-  linkedin: "https://www.linkedin.com/in/ragul-a-295b02148",
+  linkedin: "https://www.linkedin.com/in/ragul-arulanandam-295b02148/",
   headline: "Where clean code meets curious data.",
   roles: ["Software Engineer", "Full-stack Developer", "Python Developer", "Data Scientist", "Data Engineer", "Data Analyst"],
   seeking:

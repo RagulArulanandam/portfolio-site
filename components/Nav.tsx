@@ -14,9 +14,9 @@ export default function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
         <Link href="/" className="flex items-center gap-3" aria-label="Ragul Arulanandam, Software Engineer">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-black.png" alt="" className="logo-light h-8 w-auto" />
+          <img src="/logo-black.png" alt="" className="logo-light h-10 w-auto" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo-white.png" alt="" className="logo-dark h-8 w-auto" />
+          <img src="/logo-white.png" alt="" className="logo-dark h-10 w-auto" />
           <span className="border-l border-fg/70 pl-3 leading-none">
             <span className="block font-serif text-base tracking-tight">Ragul Arulanandam</span>
             <span className="mt-1 block text-[9px] font-medium uppercase tracking-[0.3em] text-muted">

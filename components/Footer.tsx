@@ -8,8 +8,8 @@ export default function Footer() {
           &copy; {profile.name}
         </span>
         <span className="flex gap-4">
-          <a href={profile.github} className="hover:text-fg">GitHub</a>
-          <a href={profile.linkedin} className="hover:text-fg">LinkedIn</a>
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className="hover:text-fg">GitHub</a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-fg">LinkedIn</a>
           <a href={`mailto:${profile.email}`} className="hover:text-fg">Email</a>
         </span>
       </div>

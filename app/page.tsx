@@ -14,22 +14,22 @@ export default function Home() {
         <span className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-fg">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Open to work · {profile.location}
         </span>
-        <h1 className="font-display mt-6 max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-6xl">
+        <h1 className="font-display mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
           Where clean code meets <span className="text-gradient">curious data.</span>
         </h1>
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
-        <p className="mt-4 max-w-2xl text-base font-medium">{profile.seeking}</p>
+        <p className="font-summary mt-6 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
+        <p className="font-tagline mt-5 max-w-2xl text-2xl leading-snug sm:text-3xl">{profile.seeking}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {profile.roles.map((r) => (
-            <span key={r} className="rounded-full border border-line bg-bg px-3 py-1 text-xs font-medium text-muted">
+            <span key={r} className="font-roles rounded-full border border-line px-3 py-1 text-[11px] text-muted">
               {r}
             </span>
           ))}
         </div>
         <div className="mt-8 flex flex-wrap gap-3">
           <Link href="/projects" className={btnPrimary}>View projects</Link>
-          <a href={profile.github} className={btnGhost}>GitHub</a>
-          <a href={profile.linkedin} className={btnGhost}>LinkedIn</a>
+          <a href={profile.github} target="_blank" rel="noopener noreferrer" className={btnGhost}>GitHub</a>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className={btnGhost}>LinkedIn</a>
         </div>
         <p className="mt-6 text-sm text-muted">{profile.visa}</p>
       </div>
@@ -116,7 +116,7 @@ export default function Home() {
 
       <section id="contact" className="scroll-mt-16 border-t border-line bg-surface">
         <div className="mx-auto max-w-6xl px-5 py-20">
-          <h2 className="font-display text-3xl font-extrabold tracking-tight">
+          <h2 className="font-display text-3xl font-bold tracking-tight">
             Got a problem worth <span className="text-gradient">solving?</span>
           </h2>
           <p className="mt-3 max-w-xl text-muted">
