@@ -1,25 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #ffffff;
-  --surface: #f6f8fc;
-  --text: #0f172a;
-  --muted: #5b6678;
-  --border: #e4e9f2;
-  --accent: #2563eb;
-  --accent-soft: #e8efff;
-  --accent-text: #1d4ed8;
+  --bg: #f7f4ee;
+  --surface: #efeae0;
+  --text: #0b0b0b;
+  --muted: #6b665c;
+  --border: #e2dccf;
+  --accent: #ff7a00;
+  --accent-soft: #ffe7cc;
+  --accent-text: #9a4a00;
 }
 
 :root[data-theme="dark"] {
-  --bg: #0b1020;
-  --surface: #121a30;
-  --text: #e8ecf5;
-  --muted: #9aa6bd;
-  --border: #243050;
-  --accent: #5b8cff;
-  --accent-soft: #17254a;
-  --accent-text: #9db8ff;
+  --bg: #0b0b0b;
+  --surface: #151515;
+  --text: #f7f4ee;
+  --muted: #a39d90;
+  --border: #2a2a2a;
+  --accent: #ff7a00;
+  --accent-soft: #3a2200;
+  --accent-text: #ffb15a;
 }
 
 @theme inline {
@@ -43,7 +43,7 @@ html {
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, var(--accent), #8b5cf6 60%, #06b6d4);
+  background: linear-gradient(90deg, #ff7a00, #ffb15a);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -51,8 +51,8 @@ html {
 
 .hero-glow {
   background:
-    radial-gradient(40rem 20rem at 85% 0%, color-mix(in srgb, #8b5cf6 22%, transparent), transparent 70%),
-    radial-gradient(36rem 18rem at 5% 10%, color-mix(in srgb, var(--accent) 20%, transparent), transparent 70%);
+    radial-gradient(40rem 20rem at 85% 0%, color-mix(in srgb, #ffb15a 25%, transparent), transparent 70%),
+    radial-gradient(36rem 18rem at 5% 10%, color-mix(in srgb, #ff7a00 18%, transparent), transparent 70%);
 }
 
 body {
@@ -67,3 +67,7 @@ body {
     scroll-behavior: auto;
   }
 }
+
+.logo-dark { display: none; }
+:root[data-theme="dark"] .logo-light { display: none; }
+:root[data-theme="dark"] .logo-dark { display: block; }

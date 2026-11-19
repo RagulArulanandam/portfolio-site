@@ -17,7 +17,7 @@ export default function ProjectGrid() {
             aria-selected={filter === c}
             onClick={() => setFilter(c)}
             className={`rounded-full border px-4 py-1.5 text-sm transition ${
-              filter === c ? "border-accent bg-accent text-white" : "border-line text-muted hover:text-fg"
+              filter === c ? "border-accent bg-accent text-[#0b0b0b]" : "border-line text-muted hover:text-fg"
             }`}
           >
             {c}

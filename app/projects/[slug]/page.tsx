@@ -44,7 +44,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <h1 className="mt-3 text-4xl font-semibold tracking-tight">{p.title}</h1>
       <p className="mt-3 text-lg text-muted">{p.tagline}</p>
       {p.repo && (
-        <a href={p.repo} className="mt-5 inline-block rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90">
+        <a href={p.repo} className="mt-5 inline-block rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-[#0b0b0b] hover:opacity-90">
           View code on GitHub
         </a>
       )}

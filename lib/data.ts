@@ -21,10 +21,10 @@ export const profile = {
   email: "ragularulanandam@gmail.com",
   github: "https://github.com/RagulArulanandam",
   linkedin: "https://www.linkedin.com/in/ragul-a-295b02148",
-  headline: "I turn code and data into intelligent software.",
+  headline: "Where clean code meets curious data.",
   roles: ["Software Engineer", "Full-stack Developer", "Python Developer", "Data Scientist", "Data Engineer", "Data Analyst"],
   seeking:
-    "Hunting for roles where clean code meets curious data: building products, shaping pipelines and teaching models to be useful.",
+    "Hunting for roles where I can build products, shape data pipelines and teach models to be genuinely useful.",
   intro:
     "Software engineer with 3+ years of commercial experience in C#, ASP.NET Core, Angular and React, and an MSc in Data Science and AI (Merit) from the University of Liverpool. I enjoy turning ideas into working systems, from data pipelines and models to APIs and polished interfaces.",
   visa: "Graduate Visa to Dec 2028. Open to Skilled Worker sponsorship.",

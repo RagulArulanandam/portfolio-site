@@ -2,7 +2,7 @@ import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import { certs, education, experience, profile, projects, skills } from "@/lib/data";
 
-const btnPrimary = "rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-white hover:opacity-90";
+const btnPrimary = "rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-[#0b0b0b] hover:opacity-90";
 const btnGhost = "rounded-full border border-line px-5 py-2.5 text-sm font-medium hover:border-accent";
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
           <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Open to work · {profile.location}
         </span>
         <h1 className="font-display mt-6 max-w-3xl text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-6xl">
-          I turn <span className="text-gradient">code and data</span> into intelligent software.
+          Where clean code meets <span className="text-gradient">curious data.</span>
         </h1>
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
         <p className="mt-4 max-w-2xl text-base font-medium">{profile.seeking}</p>
