@@ -14,11 +14,11 @@ export default function Home() {
         <span className="inline-flex items-center gap-2 rounded-full bg-accent-soft px-3 py-1 text-xs font-medium text-accent-fg">
           <span className="h-1.5 w-1.5 rounded-full bg-accent" /> Open to work · {profile.location}
         </span>
-        <h1 className="font-display mt-6 max-w-3xl text-4xl font-bold leading-[1.1] tracking-tight sm:text-6xl">
+        <h1 className="font-display mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] sm:text-6xl">
           Where clean code meets <span className="text-gradient">curious data.</span>
         </h1>
         <p className="font-summary mt-6 max-w-2xl text-lg leading-relaxed text-muted">{profile.intro}</p>
-        <p className="font-tagline mt-5 max-w-2xl text-2xl leading-snug sm:text-3xl">{profile.seeking}</p>
+        <p className="font-tagline mt-6 max-w-2xl text-xl leading-snug sm:text-2xl">{profile.seeking}</p>
         <div className="mt-4 flex flex-wrap gap-2">
           {profile.roles.map((r) => (
             <span key={r} className="font-roles rounded-full border border-line px-3 py-1 text-[11px] text-muted">
